@@ -116,3 +116,12 @@ services:
       - config-server
       - rabbitmq
     restart: always
+
+  product-webapp:
+    container_name: product-webapp
+    build: product-webapp/
+    hostname: localhost
+    restart: always
+    network_mode: host
+    ports:
+      - 4200:4200
